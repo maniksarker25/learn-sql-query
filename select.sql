@@ -24,3 +24,22 @@ VALUES
 ('Michael', 'Brown', 23, 'B+', 'Computer Science', 'michael.brown@example.com', '2000-08-05', 'O-', 'India'),
 ('Olivia', 'Davis', 20, 'A+', 'History', 'olivia.davis@example.com', '2003-04-25', 'A+', 'USA')
 ;
+
+
+
+/* Get all data from a table ----------- */
+SELECT * from students;
+
+
+/* Get specific fields------------- */
+SELECT email,age,blood_group from students;
+
+
+/* get with rename with alies */
+SELECT email as studentEmail, age as "Student Age" from students;
+
+
+
+/* Get with sort */
+SELECT * from students ORDER BY age DESC;
+
