@@ -63,4 +63,24 @@ SELECT * from students
 SELECT * from students
     WHERE grade = 'A' AND course = 'Physics';
 
-    
+
+
+/* Select coutnry usa or australia */
+SELECT * from students
+    WHERE country = 'USA' OR country = 'Australia';
+
+
+/* Contry usa or australia and age 20 */
+SELECT * from students
+    WHERE (country = 'USA' OR country = 'Australia') AND age = 20;
+
+
+/* comparision ----------------*/
+SELECT * from students
+    WHERE age > 20;
+
+SELECT * FROM students
+    WHERE age != 20;
+
+SELECT * from students
+    WHERE country != 'USA';
