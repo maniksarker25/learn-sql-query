@@ -31,3 +31,12 @@ ALter COLUMN user_age set NOT NULL;
 
 ALTER Table test_table
 ALter COLUMN user_age DROP NOT NULL;
+
+
+ALTER Table test_table
+Add Constraint unique_test_table_user_age UNIQUE(user_age);
+
+
+ALTER Table test_table
+DROP constraint unique_test_table_user_age;
+
