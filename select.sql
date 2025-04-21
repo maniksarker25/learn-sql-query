@@ -103,3 +103,58 @@ SELECT sum(age) from students;
 SELECT count(*) from students;
 
 SELECT max(length(first_name)) as "Max first name Length" from students;
+
+/* Null */
+SELECT * from students
+    WHERE email is NULL;
+
+
+SELECT * from students
+    WHERE email is NOT NULL;
+
+
+
+/* Where null set a default value  */
+SELECT COALESCE(email,'Not Provided') from students;
+
+
+
+/* In  */
+
+SELECT * from students
+    WHERE country IN('USA','UK','Canada')
+
+SELECT * from students
+    WHERE country NOT IN('USA','UK','Canada')
+
+
+/* Between-------------------- */
+SELECT * from students 
+    WHERE age BETWEEN 19 and 22;
+
+
+SELECT * FROM students
+    WHERE dob BETWEEN '2002-01-01' and '2005-01-01' ORDER BY dob;
+
+
+/* Like search--------------- */
+
+
+SELECT * from students
+    WHERE first_name LIKE '%am'; /* sas hoisa am dia amon first name and case in-sensetive */
+
+
+
+
+/* LImit , Opset*/
+
+
+SELECT * from students LIMIT 10;
+
+/* OFSET -------------*/
+
+SELECT * from students LIMIT 5 OFFSET 2;
+
+
+/* For pagination */
+SELECT * from students LIMIT 10 OFFSET 10 * 1;
