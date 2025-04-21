@@ -43,3 +43,24 @@ SELECT email as studentEmail, age as "Student Age" from students;
 /* Get with sort */
 SELECT * from students ORDER BY age DESC;
 
+
+/* Get unique countries ---------- */
+SELECT DISTINCT country from students;
+
+
+/* Unique blood group */
+SELECT DISTINCT blood_group from students;
+
+
+
+/* Filter for country usa */
+
+SELECT * from students
+    WHERE country = 'USA';
+
+
+/* Select student wtih A grade in physics */
+SELECT * from students
+    WHERE grade = 'A' AND course = 'Physics';
+
+    
