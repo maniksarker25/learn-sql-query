@@ -84,3 +84,22 @@ SELECT * FROM students
 
 SELECT * from students
     WHERE country != 'USA';
+
+
+/* functions ----------------------- */
+SELECT concat(first_name,' ',last_name) as "Full Name" from students;
+
+
+
+
+/* aggregate function -----------------*/
+
+SELECT avg(age) as "Average Age" from  students;
+
+SELECT max(age) as "Max Age" from students;
+
+SELECT sum(age) from students;
+
+SELECT count(*) from students;
+
+SELECT max(length(first_name)) as "Max first name Length" from students;
